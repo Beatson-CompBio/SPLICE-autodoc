@@ -16,7 +16,7 @@ for path in folder_paths:
         module_name = python_file.split(".")[0]
         if module_name == "main":
           module_name = path.split("/")[-1] + "." + module_name
-          python_file = page_name + " " + python_file
+          python_file = page_name.lower() + " " + python_file
         f.write(f"\n{python_file}\n")
         f.write("^" * len(python_file) + "\n")
         f.write("\n")
@@ -28,6 +28,7 @@ for path in folder_paths:
         f.write("   :noindex:\n")
 
   
+
 
 
 
