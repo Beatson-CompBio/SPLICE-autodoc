@@ -3,14 +3,11 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../../splice-api/app'))
-sys.path.insert(0, os.path.abspath('../../splice-cli/src/splice_cli'))
-sys.path.insert(0, os.path.abspath('../../splice-lib/src/splice_lib'))
-sys.path.insert(0, os.path.abspath('../../splice-pipeline'))
-sys.path.insert(0, os.path.abspath('../../splice-tests'))
-sys.path.insert(0, os.path.abspath('../../splice-ui'))
-sys.path.insert(0, os.path.abspath('../../splice-api'))
-sys.path.insert(0, os.path.abspath('../../splice-lib/src'))
+folder_paths = ['../../splice-api/app','../../splice-cli/src/splice_cli','../../splice-lib/src/splice_lib','../../splice-pipeline/src/splice_pipeline','../../splice-tests','../../splice-ui/src/splice_ui','../../splice-api','../../splice-lib/src','../../splice-cli/src','../../splice-pipeline/src','../../splice-ui/src']
+
+for path in folder_paths:
+    sys.path.insert(0, os.path.abspath(path))
+
 
 # -- Project information
 

@@ -1,6 +1,6 @@
 import os
 
-folder_paths = ['splice-api/app','splice-cli/src/splice_cli','splice-lib/src/splice_lib']
+folder_paths = ['splice-api/app','splice-cli/src/splice_cli','splice-lib/src/splice_lib','splice-pipeline/src/splice_pipeline','splice-tests','splice-ui/src/splice_ui']
 
 for path in folder_paths:
   python_files = [f for f in os.listdir(path) if f.endswith('.py') and f != "__init__.py"]
