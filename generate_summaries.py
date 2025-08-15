@@ -21,9 +21,10 @@ with open("docs/source/Summaries.rst", 'w') as f:
     for python_file in python_files:
         module_name = python_file.split(".")[0]
         if module_name == "main":
-          module_name = path.split("/")[-1] + "." + module_name
+          module_name = path.split("/")[-1] + "." + module_name + ".main"
         f.write(f"   {module_name}\n")
     f.write("\n")
+
 
 
 
