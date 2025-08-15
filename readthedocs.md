@@ -185,13 +185,13 @@ class ClassName():
 
   """
 
-def \_\_init_\_(self, firstPar, secondPar=0):
+  def \_\_init_\_(self, firstPar, secondPar=0):
 
-  """Constructor method"""
+    """Constructor method"""
 
-  self.par1 = firstPar
+    self.par1 = firstPar
 
-  self.par2 = secondPar
+    self.par2 = secondPar
 
   def classMethod(self, thirdPar):
 
