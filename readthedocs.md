@@ -64,3 +64,159 @@ Once these are in place, you can choose whether you want to manually write up yo
 RTD runs the code in .readthedocs.yaml and then uses a set of python commands to create the web pages from the sphinx .rst files, and then runs the commands needed to create the .pdf and .epub forms of the page. In theory, could be manually done if you go through each step in the command prompt but the virtual environment refuses to install the sphinx-build function necessary to construct the .html files from the .rst files. May be a problem with the install method (using uv) but I can look further into it if necessary.
 
 https://docs.readthedocs.com/platform/latest/tutorial/index.html
+
+
+# Docstrings
+
+Docstring examples are meant for Sphinx, syntax may differ if not using Sphinx for your documentation.
+
+## Template
+
+\[imports\]
+
+\__doc__ = """\[Docstring for entire program\]"""
+
+define error
+
+"""Explanation of what causes error to occur"""
+
+define function
+
+"""
+
+\[Single line summary\]
+
+\[Extended explanation of function\]
+
+:param \[ParamName\]: \[ParamDescription\], defaults to \[DefaultParamVal\]
+
+:type \[ParamName\]: \[ParamType\](, optional)
+
+(repeat for every parameter)
+
+:raises \[ErrorType\]: \[ErrorDescription\]
+
+(repeat for every error)
+
+:return: \[ReturnDescription\]
+
+:rtype: \[ReturnType\]
+
+"""
+
+## Full docstring example
+
+from fastapi import FastAPI
+
+\__doc__ = """This should describe the purpose of this file"""
+
+class ExampleError(Exception):
+
+""" Raised if the parameter is not a string"""
+
+pass
+
+def exampleFunction(example):
+
+"""
+
+Description of this function
+
+Extended descriptions will appear on automodules but not on the autosummaries (i.e. on the individual pages vs on the summaries page).
+
+This text can be as long as you like, and you can put a blank line between paragraphs in your description
+
+like so, to format them properly
+
+:param example: Word that will be passed into exampleFunction
+
+:type example: string, not optional
+
+:raise example_file.ExampleError: If the parameter is not a string
+
+:return: The string backwards
+
+:rtype: string
+
+For example:
+
+.. code-block:: python
+
+from example_file import exampleFunction
+
+print(exampleFunction('This is an example string'))
+
+\>>>gnirts elpmaxe na si sihT
+
+"""
+
+try:
+
+if type(example) != str:
+
+raise ExampleError
+
+except ExampleError:
+
+print("Not a string")
+
+return
+
+return example\[::-1\]
+
+print(exampleFunction("This is an example string"))
+
+
+Classes use the same syntax, like this:
+
+class ClassName():
+
+"""
+
+This is a description of ClassName
+
+:param firstPar: This is the first example parameter
+
+:type firstPar: string, not optional
+
+:param secondPar: This is the second example parameter
+
+:type secondPar: integer, optional
+
+"""
+
+def \__init_\_(self, firstPar, secondPar=0):
+
+"""Constructor method"""
+
+self.par1 = firstPar
+
+self.par2 = secondPar
+
+def classMethod(self, thirdPar):
+
+"""
+
+This is the description of this method
+
+:param thirdPar: This is the third example parameter
+
+:type thirdPar: integer, non-optional
+
+:return: The integer passed in + 1
+
+:rtype: integer
+
+"""
+
+return thirdPar + 1
+
+Altogether this gives you:
+
+[this website](https://splice-autodoc-test.readthedocs.io/en/stable/Cli.html)
+
+Official RTD docs: [here](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html)
+
+When using Sphinx to create the documents, it is best to provide examples using
+
+.. code-block:: \[language\] followed by a blank line and then the example code of how to use the module. The example in the above section is very simple but if your docstring is formatted correctly, you can make the code as long as you need it to be.
