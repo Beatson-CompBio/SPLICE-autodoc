@@ -185,7 +185,7 @@ class ClassName():
 
   """
 
-def \__init_\_(self, firstPar, secondPar=0):
+def \_\_init_\_(self, firstPar, secondPar=0):
 
   """Constructor method"""
 
