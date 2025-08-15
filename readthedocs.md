@@ -54,11 +54,11 @@ It is good practise to include a complete toctree here, as any .rst files that a
 
 Once these are in place, you can choose whether you want to manually write up your .rst files or create a python script like the example to generate pages from specific directories. Any python scripts that need to be run must be put in the .readthedocs.yaml file to be run by RTD when it builds the pages.
 
-Example
+### Example
 
 ![example image](example_image.png)
 
 
-Extra info
+## Extra info
 
 RTD runs the code in .readthedocs.yaml and then uses a set of python commands to create the web pages from the sphinx .rst files, and then runs the commands needed to create the .pdf and .epub forms of the page. In theory, could be manually done if you go through each step in the command prompt but the virtual environment refuses to install the sphinx-build function necessary to construct the .html files from the .rst files. May be a problem with the install method (using uv) but I can look further into it if necessary.
