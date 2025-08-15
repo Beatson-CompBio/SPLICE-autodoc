@@ -167,6 +167,7 @@ def exampleFunction(example):
 print(exampleFunction("This is an example string"))
 
 
+
 Classes use the same syntax, like this:
 
 class ClassName():
