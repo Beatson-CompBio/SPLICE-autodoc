@@ -8,7 +8,7 @@ Back in your repository, ensure that there is:
 
 ## File Descriptions
 
-.readthedocs.yaml
+### .readthedocs.yaml
 
 This is the main configuration file for RTD. It defines:
 
@@ -21,14 +21,14 @@ This is the main configuration file for RTD. It defines:
 
 RTD uses this file to configure the environment and build process when generating the documentation.
 
-pyproject.toml/requirements.txt
+### pyproject.toml/requirements.txt
 
 These files specify your project’s dependencies  
 In the example repo, both are included, but for simplicity, you can use only pyproject.toml.
 
 RTD uses these to install any packages needed for documentation generation (e.g., Sphinx, extensions, imports for your Python files).
 
-Sphinx files
+### Sphinx files
 
 The files in the first bullet point are automatically made if you use sphinx-quickstart.
 
@@ -36,7 +36,7 @@ The files in the first bullet point are automatically made if you use sphinx-qui
 - conf.py: Main configuration for Sphinx
 - index.rst: Homepage
 
-conf.py
+### conf.py
 
 Configuration options for sphinx, includes:
 
@@ -46,7 +46,7 @@ Configuration options for sphinx, includes:
 
 The most important file for controlling how your documentation is formatted and controlled during generation
 
-index.rst
+### index.rst
 
 This is the homepage of your documentation.
 
