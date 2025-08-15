@@ -23,7 +23,8 @@ with open("docs/source/Summaries.rst", 'w') as f:
         if module_name == "main":
           module_name = path.split("/")[-1] + "." + module_name
         f.write(f"   {module_name}\n")
-        f.write("\n")
+    f.write("\n")
+
 
 
 
