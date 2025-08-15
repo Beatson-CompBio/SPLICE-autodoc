@@ -74,7 +74,7 @@ Docstring examples are meant for Sphinx, syntax may differ if not using Sphinx f
 
 \[imports\]
 
-\__doc__ = """\[Docstring for entire program\]"""
+\_\_doc__ = """\[Docstring for entire program\]"""
 
 define error
 
@@ -108,7 +108,7 @@ define function
 
 from fastapi import FastAPI
 
-\__doc__ = """This should describe the purpose of this file"""
+\_\_doc__ = """This should describe the purpose of this file"""
 
 class ExampleError(Exception):
 
