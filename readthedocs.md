@@ -62,3 +62,5 @@ Once these are in place, you can choose whether you want to manually write up yo
 ## Extra info
 
 RTD runs the code in .readthedocs.yaml and then uses a set of python commands to create the web pages from the sphinx .rst files, and then runs the commands needed to create the .pdf and .epub forms of the page. In theory, could be manually done if you go through each step in the command prompt but the virtual environment refuses to install the sphinx-build function necessary to construct the .html files from the .rst files. May be a problem with the install method (using uv) but I can look further into it if necessary.
+
+https://docs.readthedocs.com/platform/latest/tutorial/index.html
