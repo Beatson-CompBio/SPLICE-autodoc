@@ -8,7 +8,7 @@ Back in your repository, ensure that there is:
 
 ## File Descriptions
 
-### .readthedocs.yaml
+### <u> .readthedocs.yaml </u>
 
 This is the main configuration file for RTD. It defines:
 
