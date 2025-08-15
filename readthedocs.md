@@ -6,7 +6,7 @@ Back in your repository, ensure that there is:
 - a pyproject.toml and/or requirements.txt file
 - the required files for Sphinx: make.bat, Makefile, conf.py and index.rst
 
-File Descriptions
+## <u>File Descriptions</u>
 
 .readthedocs.yaml
 
